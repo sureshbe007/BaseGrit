@@ -3,7 +3,7 @@ package com.example.ideaplunge.basegrit.data;
 
 
 import com.example.ideaplunge.basegrit.data.listners.DataListener;
-import com.example.ideaplunge.basegrit.data.network.EstoreApiHelper;
+import com.example.ideaplunge.basegrit.data.network.UserApiHelper;
 import com.example.ideaplunge.basegrit.data.pref.PreferencesHelper;
 
 import javax.inject.Inject;
@@ -14,10 +14,10 @@ import javax.inject.Singleton;
 public class DataManager {
 
   private final PreferencesHelper mPreferencesHelper;
-  private final EstoreApiHelper estoreApiHelper;
+  private final UserApiHelper estoreApiHelper;
 
   @Inject
-  public DataManager(PreferencesHelper preferencesHelper, EstoreApiHelper estoreApiHelper) {
+  public DataManager(PreferencesHelper preferencesHelper, UserApiHelper estoreApiHelper) {
     this.mPreferencesHelper = preferencesHelper;
     this.estoreApiHelper = estoreApiHelper;
   }
