@@ -1,0 +1,69 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext
+  {
+
+
+    minSdkVersion = 15
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+    buildToolsVersion = '23.0.2'
+
+    // dependencies versions
+    supportLibraryVersion = '28.0.0'
+    playServicesVersion = '9.2.1'
+
+    recyclerview ='28.0.0'
+
+    // Rxjava2
+
+    rxjavaVersion ='2.1.9'
+    rxandroidVersion ='2.0.1'
+    rxjava2Adapter ='1.0.0'
+
+    // Dagger2
+
+    daggerVersion = '2.10'
+    dageerAnnotation ='2.10'
+
+    // ButterNife
+
+//    butterknifeVersion = '8.1.1'
+//    butterknifeCompiler ='8.1.1'
+
+    // Retrofit and OkHttp
+
+    retrofit ='2.0.0'
+    retrofitConverter ='2.0.0'
+
+    okhttp ='3.0.1'
+    okhttpUrlconnection ='3.0.1'
+    loggingLnterceptor ='3.4.1'
+
+  }
