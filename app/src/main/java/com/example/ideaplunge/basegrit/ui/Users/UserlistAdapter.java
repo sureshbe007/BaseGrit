@@ -3,28 +3,35 @@ package com.example.ideaplunge.basegrit.ui.Users;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.ideaplunge.basegrit.R;
-import com.example.ideaplunge.basegrit.data.network.model.UserResponse;
+import com.example.ideaplunge.basegrit.data.network.model.UserList;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class UserlistAdapter extends RecyclerView.Adapter<UserlistAdapter.UserViewHolder> {
 
-    private ArrayList<UserResponse> userList;
+
+    private static final String TAG=UserlistAdapter.class.getSimpleName();
+    private ArrayList<UserList> userList;
     private  Context context;
     LayoutInflater layoutInflater;
 
 
-     public UserlistAdapter(Context context, ArrayList<UserResponse> userList)
+     public UserlistAdapter(Context context, ArrayList<UserList> userList)
 
      {
          this.context=context;
-         userList=userList;
+         this.userList=userList;
+         Log.d("TAGSSSS","userList====>>>>"+userList.size());
      }
     @NonNull
     @Override
@@ -36,24 +43,34 @@ public class UserlistAdapter extends RecyclerView.Adapter<UserlistAdapter.UserVi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserViewHolder userViewHolder, int i) {
+    public void onBindViewHolder(@NonNull UserViewHolder userViewHolder, int position) {
+
+         userViewHolder.txtNoticeTitle.setText(userList.get(position).getName());
+         userViewHolder.txtNoticeBrief.setText(userList.get(position).getAge());
+         userViewHolder.txtNoticeFilePath.setText(userList.get(position).getEmail());
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return userList.size();
     }
 
     class UserViewHolder extends RecyclerView.ViewHolder {
 
-        TextView txtNoticeTitle, txtNoticeBrief, txtNoticeFilePath;
+         @BindView(R.id.txt_notice_title)
+        TextView txtNoticeTitle ;
+
+        @BindView(R.id.txt_notice_brief)
+        TextView txtNoticeBrief ;
+
+        @BindView(R.id.txt_notice_file_path)
+        TextView txtNoticeFilePath;
 
         UserViewHolder(View itemView) {
             super(itemView);
-            txtNoticeTitle =  itemView.findViewById(R.id.txt_notice_title);
-            txtNoticeBrief =  itemView.findViewById(R.id.txt_notice_brief);
-            txtNoticeFilePath =  itemView.findViewById(R.id.txt_notice_file_path);
+            ButterKnife.bind(this, itemView);
+
 
         }
     }

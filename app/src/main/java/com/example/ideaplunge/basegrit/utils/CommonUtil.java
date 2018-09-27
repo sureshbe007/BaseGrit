@@ -1,6 +1,7 @@
 package com.example.ideaplunge.basegrit.utils;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
@@ -34,6 +35,7 @@ public class CommonUtil {
     return false;
   }
 
+  @Deprecated
   // Find Network Types
   public static int getDataConnectionType(Context ctx) {
 
