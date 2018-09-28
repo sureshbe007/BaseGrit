@@ -26,7 +26,7 @@
                 android:textColor="@color/colorAccent"
 
                 android:textStyle="bold"
-                android:padding="@dimen/padding_3dp"/>
+                android:padding="@dimen/padding_6dp"/>
 
             <!-- Text Notice Description -->
             <TextView
@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorAccent"
-                android:padding="@dimen/padding_3dp" />
+                android:padding="@dimen/padding_6dp" />
 
             <!-- Text Notice FilePath -->
             <TextView
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/text_size_12sp"
-                android:padding="@dimen/padding_3dp"/>
+                android:padding="@dimen/padding_6dp"/>
         </LinearLayout>
 
 
