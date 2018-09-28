@@ -19,6 +19,9 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
     }
 }
 
@@ -65,5 +68,15 @@ ext
     okhttp ='3.0.1'
     okhttpUrlconnection ='3.0.1'
     loggingLnterceptor ='3.4.1'
+
+      multidexVersion='1.0.0'
+
+
+      // Room ,LiveData and ViewModel
+
+      roomRuntimeVersion ='1.0.0'
+      lifeCycleExtensions ='1.0.0'
+      roomCompiler ='1.0.0'
+      archLifecycleVersion ='1.0.0'
 
   }

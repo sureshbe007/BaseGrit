@@ -35,7 +35,7 @@ public class CommonUtil {
     return false;
   }
 
-  @Deprecated
+    @SuppressWarnings("deprecation")
   // Find Network Types
   public static int getDataConnectionType(Context ctx) {
 
@@ -50,6 +50,7 @@ public class CommonUtil {
         return -1;
     } else
       return -1;
+
   }
 
     //  Find SdCard Mound
@@ -71,6 +72,7 @@ public class CommonUtil {
 
 
   // Get Appliucation Version
+  @SuppressWarnings("deprecation")
   public static int getApplicationVersionCode(Context ctx) {
 
     int versionCode = 0;
